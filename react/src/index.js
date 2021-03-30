@@ -1,0 +1,26 @@
+import React, { Suspense, lazy  } from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import App from './App';
+import './mock';
+// import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+    <React.StrictMode>
+        <Router>
+            <App>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Route path="/" exact component={lazy(() => import('./views/home.jsx'))} />
+                    <Route path="/hack" exact component={lazy(() => import('./views/hack.jsx'))} />
+                    <Route path="/user" exact component={lazy(() => import('./views/user.jsx'))} />
+                </Suspense>
+            </App>
+        </Router>
+    </React.StrictMode>,
+document.getElementById('root'));
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();

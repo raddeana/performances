@@ -1,0 +1,46 @@
+{
+  "name": "react-practice",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
+    "analysis": "cross-env GENERATE_SOURCEMAP=false ANALYZER=true react-app-rewired build"
+  },
+  "dependencies": {
+    "antd-mobile": "^2.3.4",
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.3",
+    "compression-webpack-plugin": "^5.0.1",
+    "cross-env": "^7.0.3",
+    "customize-cra": "^1.0.0",
+    "mockjs": "^1.1.0",
+    "react-app-rewired": "^2.1.8",
+    "react-scripts": "4.0.2",
+    "webpack-bundle-analyzer": "^4.4.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
